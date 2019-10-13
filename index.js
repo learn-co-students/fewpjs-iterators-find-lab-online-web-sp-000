@@ -4,6 +4,11 @@ function testFunc() {
   return "hi"
 }
 
-function superBowlWin(gameArray) {
-  return gameArray.find(gameObj => gameObj.result === 'W');
+function superbowlWin(gameArray) {
+  let val = gameArray.find(gameObj => gameObj.result === 'W');
+  if (val !== undefined) {
+    return val.year
+  } else {
+    return undefined
+  }
 }
