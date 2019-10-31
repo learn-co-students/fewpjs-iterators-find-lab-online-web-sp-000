@@ -1,16 +1,4 @@
-const testVar = {}
-
-function testFunc() {
-  return "hi"
+superbowlWin = (record) => {
+  let result = record.find( record => record.result === "W" )
+  return !!result ? result.year : undefined
 }
-
-
-function superbowlWin(record){
-  return record.find(rec =>{
-    if(rec.result === "W"){
-      let data = rec.year
-      return data
-        } else {
-        return undefined
-      }}
-)}
