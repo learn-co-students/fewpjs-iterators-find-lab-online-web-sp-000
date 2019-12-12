@@ -1,5 +1,12 @@
-const testVar = {}
+function superbowlWin(objectsArray) {
+  // multiple objects
 
-function testFunc() {
-  return "hi"
+  let gameWon = objectsArray.find(game => {
+    return game.result === "W"
+  });
+  if (gameWon) {
+    return(gameWon.year)
+  } else {
+    return(undefined)
+  };
 }
