@@ -4,17 +4,28 @@ function testFunc() {
   return "hi"
 }
 
-// function superbowlWin(record) {
-//   let result = record.find(record => {
-//       if (record.result === "W"){
-//         return record.year;
-//       } else {
-//         return "1969";
-//       }
-//   })
+// function find(source, fn) {
+//   for(let i=0; i<source.length; i++) {
+//     if (fn(source[i]) === true) {
+//       return source[i]
+//     }
+//   }
+//   return undefined;
 // }
 
 function superbowlWin(record) {
-  let result = record.find(e => e.result === "W")
-  return result ? result.year : undefined
+  let result = record.find(record => {
+    if (record.result === "W"){
+      return true;
+    } else {
+      return false;
+    }
+  })
+  if (result === undefined) {
+    return undefined;
+  }
+  return result.year;
 }
+
+// function superbowlWin(record) {
+// }
