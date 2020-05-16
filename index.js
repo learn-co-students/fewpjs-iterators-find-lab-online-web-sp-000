@@ -1,5 +1,7 @@
-const testVar = {}
+function superbowlWin(records) {
+  const win =  records.find(record => record.result === "W");
 
-function testFunc() {
-  return "hi"
+  if (win) {
+    return win.year;
+  };
 }
