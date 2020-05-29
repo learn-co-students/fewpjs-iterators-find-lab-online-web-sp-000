@@ -62,8 +62,8 @@
 
 function superbowlWin(arr) {
 
-  let obj = arr.find(o => o.result = 'W');
-  if(obj) return obj.year
+  let obj = arr.find(o => o.result === 'W');
+    if(obj) return obj.year
 }
 
 // superbowlWin(record)
