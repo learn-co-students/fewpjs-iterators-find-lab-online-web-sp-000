@@ -6,7 +6,5 @@ function testFunc() {
 
 function superbowlWin(srcArray) {
   let winner = srcArray.find(loser => loser.result === 'W' );
-  if (!!winner) {
-    return winner.year
-  }
+  return !!winner ? winner.year : undefined
 }
